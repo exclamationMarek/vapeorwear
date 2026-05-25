@@ -3248,9 +3248,9 @@
 		)
 		(uuid "434d7b56-e68e-4866-95ad-c8295f667ce2")
 	)
-	(text "Vfb = 0.6V\n0.6 / (47 / (47+220)) = 3.4V\nThe output is a bit hot,\nbut for many SAOs that just means brighter LEDs!"
+	(text "Vout = 0.6V * (1+(R1/R2))\nExample:  0.6 * (1+(22000/4700)) = 3.41V\nThe output is a bit hot, but for many SAOs that just means brighter LEDs!"
 		(exclude_from_sim no)
-		(at 58.42 165.354 0)
+		(at 52.578 165.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3258,6 +3258,17 @@
 			(justify left)
 		)
 		(uuid "82094552-7be5-4028-a08f-93a4a627b712")
+	)
+	(text "Battery charging current is 1000/R11\nExample:\n2.0k -> 500mA (max allowed current)\n2.2k -> 454mA (recommended)\n4.7k -> 212mA (included in kit)\n"
+		(exclude_from_sim no)
+		(at 112.522 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9f4f3513-d6ba-4c03-946b-f270da6694a2")
 	)
 	(text "USB-C"
 		(exclude_from_sim no)
@@ -5961,7 +5972,7 @@
 				)
 			)
 		)
-		(property "Value" "560R"
+		(property "Value" "2.2k"
 			(at 114.554 49.784 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6119,7 +6130,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "100nF"
 			(at 206.502 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6680,7 +6691,7 @@
 				)
 			)
 		)
-		(property "Value" "21k"
+		(property "Value" "22k"
 			(at 102.362 133.604 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7737,7 +7748,7 @@
 				)
 			)
 		)
-		(property "Value" "560R"
+		(property "Value" "2.2k"
 			(at 143.51 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7816,7 +7827,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7k"
+		(property "Value" "2.2k"
 			(at 114.046 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7895,7 +7906,7 @@
 				)
 			)
 		)
-		(property "Value" "560R"
+		(property "Value" "1k"
 			(at 205.74 51.816 90)
 			(show_name no)
 			(do_not_autoplace no)

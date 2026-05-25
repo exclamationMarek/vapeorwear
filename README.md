@@ -62,8 +62,8 @@ Pin 1 (dot) is always bottom right
 1. 4.7k (charge current set resistor. 4.7k->212mA, 2k->500mA, 10k->100mA)
 2. 4.7k (VOUT set resistor LOW)
 3. 21k	(VOUT set resistor HIGH. Included combination results in 3.24V out)
-4. 21k	(Buck converter ENABLE pull-up)
-5. 560R	(Battery protection power filter)
+4. 4.7k	(Buck converter ENABLE pull-up). Can be pretty much any value.
+5. 560R	(Battery protection IC power filter)
 
 ## Remaining components:
 Their position and orientation has been left as an exercise to the assembler
@@ -106,7 +106,7 @@ Their position and orientation has been left as an exercise to the assembler
 * Switch controls the ENABLE pin of the buck converter
 * LED is connected to the output 3.3V rail
 * Quiescent current when OFF < 3µA
-* Quiescent current when ON approx. 1.2mA
+* Quiescent current when ON approx. 1.2mA, mostly due to the power LED
 
 ## [USB-C port](https://www.lcsc.com/datasheet/C42400650.pdf) for 5V input
 
@@ -120,4 +120,4 @@ Their position and orientation has been left as an exercise to the assembler
 * VCC, GND and I2C pins are arranged so that an I2C OLED (example SSD1306) can be connected directly, should the SAO feature a micro and wish to display something.
 
 # Other notes
-The component values are a bit funky, since they are heavily consolidated. If you are assembling this with access to a full selection of passives, pick better values.
+The component values are a bit funky, since they are heavily consolidated for making convinient kits. If you are assembling this with access to a full selection of passives, pick better values. The KiCad design files contain more recommended values.
